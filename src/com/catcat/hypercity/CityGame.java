@@ -53,7 +53,7 @@ public class CityGame extends Game implements Json.Serializable {
 
     @Override
     public void create() {
-        Gdx.app.log("debug",Arrays.toString(Gdx.files.internal("").list()));
+        Gdx.app.log("debug",Arrays.toString(Gdx.files.internal("./").list()));
         batch = new SpriteBatch();
         skin = new Skin(Gdx.files.internal("ui/uiskin.json"));
         FileHandle[] packs = getPacks(); // get all the packs
