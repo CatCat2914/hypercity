@@ -31,6 +31,8 @@ import com.catcat.hypercity.loaders.ResourceLoader;
 import com.catcat.hypercity.screens.MainMenuScreen;
 import com.catcat.hypercity.story.StoryManager;
 
+import java.util.Arrays;
+
 //todo: do game balancing
 // TODO: 12/29/25 actually add education (productivity boost), would be slight challenge
 // TODO: 1/26/26 car manufacturing?
@@ -51,6 +53,7 @@ public class CityGame extends Game implements Json.Serializable {
 
     @Override
     public void create() {
+        Gdx.app.log("debug",Arrays.toString(Gdx.files.internal("").list()));
         batch = new SpriteBatch();
         skin = new Skin(Gdx.files.internal("ui/uiskin.json"));
         FileHandle[] packs = getPacks(); // get all the packs
@@ -61,7 +64,6 @@ public class CityGame extends Game implements Json.Serializable {
         BuildingLoader.load(packs);
         RecipeRegistry.register();
         campaignManager = new CampaignManager();
-        Gdx.app.log("ASSETS", "debugging");
         String[] assetsLines = Gdx.files.internal("assets.txt").readString().split("\\r?\\n");
         for (String path : assetsLines) {
             path = path.trim();
