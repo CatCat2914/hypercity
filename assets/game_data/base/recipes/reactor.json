@@ -1,0 +1,15 @@
+[
+  {
+    "key": "OIL_DIESEL",
+    "name": "Oil -> Diesel",
+    "powerConsumption": 1.5,
+    "maxWorkers": 2,
+    "inputs": [
+      { "resource": "base.OIL", "value": 1.0 }
+    ],
+    "outputs": [
+      { "resource": "base.DIESEL", "value": 0.4 },
+      { "resource": "base.WASTE", "value": 0.6 }
+    ]
+  }
+]

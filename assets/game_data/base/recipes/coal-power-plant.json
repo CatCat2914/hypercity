@@ -1,0 +1,12 @@
+[
+  {
+    "key": "USE_COAL",
+    "name": "Coal Power",
+    "powerConsumption": -7.2,
+    "maxWorkers": 3,
+    "inputs": [
+      { "resource": "base.COAL_ORE", "value": 1.0 }
+    ],
+    "outputs": []
+  }
+]

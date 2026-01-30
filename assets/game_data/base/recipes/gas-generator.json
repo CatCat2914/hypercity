@@ -1,0 +1,12 @@
+[
+  {
+    "key": "OIL_BASED",
+    "name": "Burn Oil-Based Fuels",
+    "powerConsumption": -11,
+    "maxWorkers": 0,
+    "inputs": [
+      { "tag": "OIL_FUEL", "attribute": "fuelValue", "value": 0.25 }
+    ],
+    "outputs": []
+  }
+]

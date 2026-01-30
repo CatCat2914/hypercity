@@ -1,0 +1,14 @@
+[
+  {
+    "key": "WHEAT_FLOUR",
+    "name": "Wheat -> Flour",
+    "powerConsumption": 1.0,
+    "maxWorkers": 1,
+    "inputs": [
+      { "resource": "base.WHEAT", "value": 3.0 }
+    ],
+    "outputs": [
+      { "resource": "base.FLOUR", "value": 1.0 }
+    ]
+  }
+]

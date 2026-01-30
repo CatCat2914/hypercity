@@ -1,0 +1,14 @@
+[
+  {
+    "key": "EXTRACT_OIL",
+    "name": "Extract Oil",
+    "powerConsumption": 1.0,
+    "maxWorkers": 1,
+    "inputs": [
+      { "resource": "base.ROCK", "value": 1.2 }
+    ],
+    "outputs": [
+      { "resource": "base.OIL", "value": 0.2 }
+    ]
+  }
+]

@@ -1,0 +1,14 @@
+[
+  {
+    "key": "WOOD",
+    "name": "Produce Wood",
+    "powerConsumption": 0.0,
+    "maxWorkers": 0,
+    "inputs": [
+      { "resource": "base.WATER", "value": 0.25 }
+    ],
+    "outputs": [
+      { "resource": "base.WOOD", "value": 0.5 }
+    ]
+  }
+]

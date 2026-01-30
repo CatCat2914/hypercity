@@ -1,0 +1,113 @@
+[
+  {
+    "key": "CORN",
+    "name": "Produce Corn",
+    "powerConsumption": 1.0,
+    "maxWorkers": 1,
+    "inputs": [
+      { "resource": "base.WATER", "value": 0.25 }
+    ],
+    "outputs": [
+      { "resource": "base.CORN", "value": 0.95 }
+    ]
+  },
+  {
+    "key": "WHEAT",
+    "name": "Produce Wheat",
+    "powerConsumption": 0.75,
+    "maxWorkers": 1,
+    "inputs": [
+      { "resource": "base.WATER", "value": 0.2 }
+    ],
+    "outputs": [
+      { "resource": "base.WHEAT", "value": 0.5 }
+    ]
+  },
+  {
+    "key": "MILK",
+    "name": "Produce Milk",
+    "powerConsumption": 1.5,
+    "maxWorkers": 2,
+    "inputs": [
+      { "resource": "base.WATER", "value": 1.0 },
+      { "tag": "ANIMAL_FEED", "value": 1.0 }
+    ],
+    "outputs": [
+      { "resource": "base.MILK", "value": 0.5 }
+    ]
+  },
+  {
+    "key": "CHICKEN_MEAT",
+    "name": "Kill Chickens",
+    "powerConsumption": 1.9,
+    "maxWorkers": 2,
+    "inputs": [
+      { "resource": "base.WATER", "value": 2.0 },
+      { "tag": "ANIMAL_FEED", "value": 4.0 }
+    ],
+    "outputs": [
+      { "resource": "base.RAW_CHICKEN", "value": 0.5 }
+    ]
+  },
+  {
+    "key": "TOMATO",
+    "name": "Grow Tomato",
+    "powerConsumption": 0.8,
+    "maxWorkers": 1,
+    "inputs": [
+      { "resource": "base.WATER", "value": 0.2 }
+    ],
+    "outputs": [
+      { "resource": "base.TOMATO", "value": 1.0 }
+    ]
+  },
+  {
+    "key": "LETTUCE",
+    "name": "Grow Lettuce",
+    "powerConsumption": 0.6,
+    "maxWorkers": 1,
+    "inputs": [
+      { "resource": "base.WATER", "value": 0.2 }
+    ],
+    "outputs": [
+      { "resource": "base.LETTUCE", "value": 1.3 }
+    ]
+  },
+  {
+    "key": "ONION",
+    "name": "Grow Onion",
+    "powerConsumption": 0.5,
+    "maxWorkers": 1,
+    "inputs": [
+      { "resource": "base.WATER", "value": 0.15 }
+    ],
+    "outputs": [
+      { "resource": "base.ONION", "value": 1.0 }
+    ]
+  },
+  {
+    "key": "POTATO",
+    "name": "Grow Potato",
+    "powerConsumption": 0.8,
+    "maxWorkers": 1,
+    "inputs": [
+      { "resource": "base.WATER", "value": 0.25 }
+    ],
+    "outputs": [
+      { "resource": "base.POTATO", "value": 1.0 }
+    ]
+  },
+  {
+    "key": "CARROT",
+    "name": "Grow Carrot",
+    "powerConsumption": 0.8,
+    "maxWorkers": 1,
+    "inputs": [
+      { "resource": "base.WATER", "value": 0.25 }
+    ],
+    "outputs": [
+      { "resource": "base.CARROT", "value": 1.0 }
+    ]
+  }
+]
+

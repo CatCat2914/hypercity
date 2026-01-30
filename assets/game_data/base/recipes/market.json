@@ -1,0 +1,14 @@
+[
+  {
+    "key": "SELL",
+    "name": "Sell Resources",
+    "powerConsumption": 0,
+    "maxWorkers": 1,
+    "inputs": [
+      { "tag": "SELLABLE", "attribute": "sellValue", "value": 10.0 }
+    ],
+    "outputs": [
+      { "resource": "base.COIN", "value": 10.0 }
+    ]
+  }
+]

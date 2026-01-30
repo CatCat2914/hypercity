@@ -1,0 +1,146 @@
+[
+  {
+    "key": "FACTORY",
+    "name": "Factory",
+    "category": "Refining",
+    "texturePath": "textures/buildings/factory.png",
+    "color": "00FF00",
+    "recipeFile": "recipes/factory.json"
+  },
+  {
+    "key": "REACTOR",
+    "name": "Chemical Reactor",
+    "category": "Refining",
+    "texturePath": "textures/buildings/reactor.png",
+    "color": "A050A0",
+    "recipeFile": "recipes/reactor.json"
+  },
+  {
+    "key": "NODE",
+    "name": "Node",
+    "category": "Utility",
+    "texturePath": "textures/buildings/node.png",
+    "color": "7F7F7F",
+    "className": "com.catcat.hypercity.building.behavior.utility.NodeBehavior"
+  },
+  {
+    "key": "COAL_POWER_PLANT",
+    "name": "Coal Power Plant",
+    "category": "Power",
+    "texturePath": "textures/buildings/coal-power-plant.png",
+    "color": "6B8E23",
+    "recipeFile": "recipes/coal-power-plant.json"
+  },
+  {
+    "key": "DEPOT",
+    "name": "Depot",
+    "category": "Utility",
+    "texturePath": "textures/buildings/depot.png",
+    "color": "FF69B4",
+    "className": "com.catcat.hypercity.building.behavior.utility.DepotBehavior"
+  },
+  {
+    "key": "FARM",
+    "name": "Farm",
+    "category": "Agriculture",
+    "texturePath": "textures/buildings/farm.png",
+    "color": "FFFF00",
+    "recipeFile": "recipes/farm.json"
+  },
+  {
+    "key": "HOUSE",
+    "name": "House",
+    "category": "Residential",
+    "texturePath": "textures/buildings/house.png",
+    "color": "8B4513",
+    "recipeFile": "recipes/house.json"
+  },
+  {
+    "key": "MINE",
+    "name": "Mine",
+    "category": "Extraction",
+    "texturePath": "textures/buildings/mine.png",
+    "color": "3F3F3F",
+    "recipeFile": "recipes/mine.json"
+  },
+  {
+    "key": "SCRIPTING_MODULE",
+    "name": "Scripting Module",
+    "category": "Utility",
+    "texturePath": "textures/buildings/scripting-module.png",
+    "color": "000000",
+    "className": "com.catcat.hypercity.building.behavior.utility.ScriptingModuleBehavior"
+  },
+  {
+    "key": "SOLAR_PANEL",
+    "name": "Solar Panel",
+    "category": "Power",
+    "texturePath": "textures/buildings/solar-panel.png",
+    "color": "000080",
+    "className": "com.catcat.hypercity.building.behavior.recipe.SolarPanelBuildingBehavior"
+  },
+  {
+    "key": "TREE",
+    "name": "Tree",
+    "category": "Agriculture",
+    "texturePath": "textures/buildings/tree.png",
+    "color": "228B22",
+    "recipeFile": "recipes/tree.json"
+  },
+  {
+    "key": "WATER_PUMP",
+    "name": "Water Pump",
+    "category": "Extraction",
+    "texturePath": "textures/buildings/water-pump.png",
+    "color": "0000FF",
+    "recipeFile": "recipes/water-pump.json"
+  },
+  {
+    "key": "OIL_WELL",
+    "name": "Oil Well",
+    "category": "Extraction",
+    "texturePath": "textures/buildings/oil-well.png",
+    "color": "333333",
+    "recipeFile": "recipes/oil-well.json"
+  },
+  {
+    "key": "WIND_TURBINE",
+    "name": "Wind Turbine",
+    "category": "Power",
+    "texturePath": "textures/buildings/wind-turbine.png",
+    "color": "BFBFBF",
+    "className": "com.catcat.hypercity.building.behavior.recipe.WindTurbineBuildingBehavior"
+  },
+  {
+    "key": "MILL",
+    "name": "Mill",
+    "category": "Agriculture",
+    "texturePath": "textures/buildings/mill.png",
+    "color": "5E5036",
+    "recipeFile": "recipes/mill.json"
+  },
+  {
+    "key": "BAKERY",
+    "name": "Bakery",
+    "category": "Refining",
+    "texturePath": "textures/buildings/bakery.png",
+    "color": "CAB685",
+    "recipeFile": "recipes/bakery.json"
+  },
+  {
+    "key": "MARKET",
+    "name": "Market",
+    "category": "Economy",
+    "texturePath": "textures/buildings/market.png",
+    "color": "CAB685",
+    "recipeFile": "recipes/market.json"
+  },
+  {
+    "key": "GAS_GENERATOR",
+    "name": "Gas Generator",
+    "category": "Power",
+    "texturePath": "textures/buildings/gas-generator.png",
+    "color": "419464",
+    "recipeFile": "recipes/gas-generator.json"
+  }
+]

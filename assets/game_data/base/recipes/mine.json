@@ -1,0 +1,50 @@
+[
+  {
+    "key": "EVERYTHING",
+    "name": "Mine Everything",
+    "powerConsumption": 0.5,
+    "maxWorkers": 1,
+    "inputs": [],
+    "outputs": [
+      { "resource": "base.ROCK", "value": 1.2 },
+      { "resource": "base.COAL_ORE", "value": 0.3 },
+      { "resource": "base.IRON_ORE", "value": 0.15 }
+    ]
+  },
+  {
+    "key": "ROCKS",
+    "name": "Prioritize Rocks",
+    "powerConsumption": 0.5,
+    "maxWorkers": 1,
+    "inputs": [],
+    "outputs": [
+      { "resource": "base.ROCK", "value": 2.4 },
+      { "resource": "base.COAL_ORE", "value": 0.1 },
+      { "resource": "base.IRON_ORE", "value": 0.05 }
+    ]
+  },
+  {
+    "key": "IRON",
+    "name": "Prioritize Iron",
+    "powerConsumption": 0.5,
+    "maxWorkers": 1,
+    "inputs": [],
+    "outputs": [
+      { "resource": "base.ROCK", "value": 0.8 },
+      { "resource": "base.COAL_ORE", "value": 0.1 },
+      { "resource": "base.IRON_ORE", "value": 0.3 }
+    ]
+  },
+  {
+    "key": "COAL",
+    "name": "Prioritize Coal",
+    "powerConsumption": 0.5,
+    "maxWorkers": 1,
+    "inputs": [],
+    "outputs": [
+      { "resource": "base.ROCK", "value": 0.8 },
+      { "resource": "base.COAL_ORE", "value": 0.6 },
+      { "resource": "base.IRON_ORE", "value": 0.05 }
+    ]
+  }
+]

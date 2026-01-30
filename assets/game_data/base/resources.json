@@ -1,0 +1,276 @@
+[
+  {
+    "key": "WOOD",
+    "name": "Wood Log",
+    "category": "Materials/Woods",
+    "texturePath": "textures/materials/wood.png",
+    "tags": ["SOLID", "LOG", "WOODEN", "SELLABLE"],
+    "attributes": {
+      "sellValue": 0.6
+    }
+  },
+  {
+    "key": "PLANKS",
+    "name": "Planks",
+    "category": "Materials/Woods",
+    "texturePath": "textures/materials/planks.png",
+    "tags": ["SOLID", "WOODEN", "SELLABLE"],
+    "attributes": {
+      "sellValue": 0.35
+    }
+  },
+  {
+    "key": "WATER",
+    "name": "Water",
+    "category": "Liquids",
+    "texturePath": "textures/materials/water.png",
+    "tags": ["LIQUID"]
+  },
+  {
+    "key": "OIL",
+    "name": "Oil",
+    "category": "Liquids/Oil Based",
+    "texturePath": "textures/materials/oil.png",
+    "tags": ["LIQUID", "SELLABLE"],
+    "attributes": {
+      "sellValue": 0.9
+    }
+  },
+  {
+    "key": "DIESEL",
+    "name": "Diesel",
+    "category": "Liquids/Oil Based",
+    "texturePath": "textures/materials/diesel.png",
+    "tags": ["LIQUID", "FUEL", "OIL_FUEL", "SELLABLE"],
+    "attributes": {
+      "fuelValue": 1.3,
+      "sellValue": 3.2
+    }
+  },
+  {
+    "key": "ROCK",
+    "name": "Rock",
+    "category": "Materials/Ores",
+    "texturePath": "textures/materials/rock.png",
+    "tags": ["SOLID", "SELLABLE"],
+    "attributes": {
+      "sellValue": 0.01
+    }
+  },
+  {
+    "key": "COAL_ORE",
+    "name": "Coal Ore",
+    "category": "Materials/Ores",
+    "texturePath": "textures/materials/coal-ore.png",
+    "tags": ["SOLID", "SELLABLE"],
+    "attributes": {
+      "sellValue": 0.2
+    }
+  },
+  {
+    "key": "IRON_ORE",
+    "name": "Iron Ore",
+    "category": "Materials/Ores",
+    "texturePath": "textures/materials/iron-ore.png",
+    "tags": ["SOLID", "SELLABLE"],
+    "attributes": {
+      "sellValue": 0.3
+    }
+  },
+  {
+    "key": "CORN",
+    "name": "Corn",
+    "category": "Food/Crops",
+    "texturePath": "textures/materials/corn.png",
+    "tags": ["SOLID", "FOOD", "ANIMAL_FEED", "SELLABLE"],
+    "attributes": {
+      "foodValue": 0.65,
+      "sellValue": 0.1
+    }
+  },
+  {
+    "key": "IRON_INGOT",
+    "name": "Iron Ingot",
+    "category": "Materials/Ingots",
+    "texturePath": "textures/materials/iron-ingot.png",
+    "tags": ["SOLID", "METAL", "SELLABLE"],
+    "attributes": {
+      "sellValue": 1.1
+    }
+  },
+  {
+    "key": "STEEL_INGOT",
+    "name": "Steel Ingot",
+    "category": "Materials/Ingots",
+    "texturePath": "textures/materials/steel-ingot.png",
+    "tags": ["SOLID", "METAL", "SELLABLE"],
+    "attributes": {
+      "sellValue": 3.8
+    }
+  },
+  {
+    "key": "WASTE",
+    "name": "Waste",
+    "category": "Waste",
+    "texturePath": "textures/materials/waste.png",
+    "tags": ["SOLID", "WASTE"]
+  },
+  {
+    "key": "WHEAT",
+    "name": "Wheat",
+    "category": "Food/Crops",
+    "texturePath": "textures/materials/wheat.png",
+    "tags": ["SOLID", "ANIMAL_FEED", "SELLABLE"],
+    "attributes": {
+      "sellValue": 0.12
+    }
+  },
+  {
+    "key": "RAW_CHICKEN",
+    "name": "Raw Chicken Meat",
+    "category": "Food/Ingredients",
+    "texturePath": "textures/materials/raw-chicken.png",
+    "tags": ["SOLID", "RAW", "RAW_MEAT", "SELLABLE"],
+    "attributes": {
+      "sellValue": 0.24
+    }
+  },
+  {
+    "key": "COOKED_CHICKEN",
+    "name": "Cooked Chicken Meat",
+    "category": "Food/Prepped Meals",
+    "texturePath": "textures/materials/cooked-chicken.png",
+    "tags": ["SOLID", "COOKED", "COOKED_MEAT", "SELLABLE"],
+    "attributes": {
+      "sellValue": 3.40,
+      "foodValue": 3.8
+    }
+  },
+  {
+    "key": "MILK",
+    "name": "Milk",
+    "category": "Liquids",
+    "texturePath": "textures/materials/milk.png",
+    "tags": ["LIQUID", "FOOD", "SELLABLE"],
+    "attributes": {
+      "foodValue": 0.3,
+      "sellValue": 0.6
+    }
+  },
+  {
+    "key": "FLOUR",
+    "name": "Flour",
+    "category": "Food/Ingredients",
+    "texturePath": "textures/materials/flour.png",
+    "tags": ["SOLID", "SELLABLE"],
+    "attributes": {
+      "sellValue": 0.48
+    }
+  },
+  {
+    "key": "BREAD",
+    "name": "Bread",
+    "category": "Food/Ingredients",
+    "texturePath": "textures/materials/bread.png",
+    "tags": ["SOLID", "FOOD", "SELLABLE"],
+    "attributes": {
+      "foodValue": 3.2,
+      "sellValue": 0.9
+    }
+  },
+  {
+    "key": "TOMATO",
+    "name": "Tomato",
+    "category": "Food/Crops",
+    "texturePath": "textures/materials/tomato.png",
+    "tags": ["SOLID", "FOOD", "SELLABLE"],
+    "attributes": {
+      "foodValue": 0.4,
+      "sellValue": 0.11
+    }
+  },
+  {
+    "key": "LETTUCE",
+    "name": "Lettuce",
+    "category": "Food/Crops",
+    "texturePath": "textures/materials/lettuce.png",
+    "tags": ["SOLID", "FOOD", "ANIMAL_FEED", "SELLABLE"],
+    "attributes": {
+      "foodValue": 0.25,
+      "sellValue": 0.08
+    }
+  },
+  {
+    "key": "ONION",
+    "name": "Onion",
+    "category": "Food/Crops",
+    "texturePath": "textures/materials/onion.png",
+    "tags": ["SOLID", "FOOD", "SELLABLE"],
+    "attributes": {
+      "foodValue": 0.2,
+      "sellValue": 0.09
+    }
+  },
+  {
+    "key": "POTATO",
+    "name": "Potato",
+    "category": "Food/Crops",
+    "texturePath": "textures/materials/potato.png",
+    "tags": ["SOLID", "FOOD", "ANIMAL_FEED", "SELLABLE"],
+    "attributes": {
+      "foodValue": 0.6,
+      "sellValue": 0.13
+    }
+  },
+  {
+    "key": "CARROT",
+    "name": "Carrot",
+    "category": "Food/Crops",
+    "texturePath": "textures/materials/carrot.png",
+    "tags": ["SOLID", "FOOD", "ANIMAL_FEED", "SELLABLE"],
+    "attributes": {
+      "foodValue": 0.6,
+      "sellValue": 0.14
+    }
+  },
+  {
+    "key": "CHEESE",
+    "name": "Cheese",
+    "category": "Food/Ingredients",
+    "texturePath": "textures/materials/cheese.png",
+    "tags": ["SOLID", "FOOD", "SELLABLE"],
+    "attributes": {
+      "foodValue": 1.5,
+      "sellValue": 1.4
+    }
+  },
+  {
+    "key": "SANDWICH",
+    "name": "Sandwich",
+    "category": "Food/Prepped Meals",
+    "texturePath": "textures/materials/sandwich.png",
+    "tags": ["SOLID", "FOOD", "SELLABLE"],
+    "attributes": {
+      "foodValue": 9.5,
+      "sellValue": 5.2
+    }
+  },
+  {
+    "key": "PIZZA",
+    "name": "Pizza",
+    "category": "Food/Prepped Meals",
+    "texturePath": "textures/materials/pizza.png",
+    "tags": ["SOLID", "FOOD", "SELLABLE"],
+    "attributes": {
+      "foodValue": 8.7,
+      "sellValue": 4.7
+    }
+  },
+  {
+    "key": "COIN",
+    "name": "Coin",
+    "category": "Money",
+    "texturePath": "textures/materials/coin.png",
+    "tags": ["SOLID"]
+  }
+]

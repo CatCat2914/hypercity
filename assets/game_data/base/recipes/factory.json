@@ -1,0 +1,39 @@
+[
+  {
+    "key": "PLANKS",
+    "name": "Logs -> Planks",
+    "powerConsumption": 2.0,
+    "maxWorkers": 2,
+    "inputs": [
+      { "tag": "LOG", "value": 1.0 }
+    ],
+    "outputs": [
+      { "resource": "base.PLANKS", "value": 3.0 }
+    ]
+  },
+  {
+    "key": "IRON",
+    "name": "Smelt Iron",
+    "powerConsumption": 3.0,
+    "maxWorkers": 1,
+    "inputs": [
+      { "resource": "base.IRON_ORE", "value": 1.2 }
+    ],
+    "outputs": [
+      { "resource": "base.IRON_INGOT", "value": 0.6 }
+    ]
+  },
+  {
+    "key": "STEEL",
+    "name": "Forge Steel",
+    "powerConsumption": 5.0,
+    "maxWorkers": 1,
+    "inputs": [
+      { "resource": "base.IRON_INGOT", "value": 1.0 },
+      { "resource": "base.COAL_ORE", "value": 0.5 }
+    ],
+    "outputs": [
+      { "resource": "base.STEEL_INGOT", "value": 1.0 }
+    ]
+  }
+]

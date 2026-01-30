@@ -1,0 +1,13 @@
+[
+  {
+    "key": "6WORKER",
+    "name": "6x Worker House",
+    "powerConsumption": 1.0,
+    "maxWorkers": -6,
+    "inputs": [
+      { "resource": "base.WATER", "value": 0.1 },
+      { "tag": "FOOD", "attribute": "foodValue", "value": 0.2 }
+    ],
+    "outputs": []
+  }
+]

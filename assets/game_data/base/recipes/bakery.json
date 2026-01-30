@@ -1,0 +1,70 @@
+[
+  {
+    "key": "BAKE_BREAD",
+    "name": "Bake Bread",
+    "powerConsumption": 1.25,
+    "maxWorkers": 2,
+    "inputs": [
+      { "resource": "base.FLOUR", "value": 1.0 },
+      { "resource": "base.WATER", "value": 0.25 }
+    ],
+    "outputs": [
+      { "resource": "base.BREAD", "value": 1.0 }
+    ]
+  },
+  {
+    "key": "CHEESE",
+    "name": "Make Cheese",
+    "powerConsumption": 0.3,
+    "maxWorkers": 1,
+    "inputs": [
+      { "resource": "base.MILK", "value": 0.3 }
+    ],
+    "outputs": [
+      { "resource": "base.CHEESE", "value": 0.2 }
+    ]
+  },
+  {
+    "key": "PIZZA",
+    "name": "Make Pizza",
+    "powerConsumption": 3,
+    "maxWorkers": 2,
+    "inputs": [
+      { "resource": "base.CHEESE", "value": 0.2 },
+      { "resource": "base.FLOUR", "value": 0.2 },
+      { "resource": "base.TOMATO", "value": 0.2 },
+      { "resource": "base.WATER", "value": 0.1 }
+    ],
+    "outputs": [
+      { "resource": "base.PIZZA", "value": 0.1 }
+    ]
+  },
+  {
+    "key": "COOK_CHICKEN",
+    "name": "Cook Chicken",
+    "powerConsumption": 2.4,
+    "maxWorkers": 1,
+    "inputs": [
+      { "resource": "base.RAW_CHICKEN", "value": 0.3 }
+    ],
+    "outputs": [
+      { "resource": "base.COOKED_CHICKEN", "value": 0.3 }
+    ]
+  },
+  {
+    "key": "SANDWICH",
+    "name": "Make Sandwich",
+    "powerConsumption": 1.3,
+    "maxWorkers": 1,
+    "inputs": [
+      { "resource": "base.BREAD", "value": 0.2 },
+      { "resource": "base.CHEESE", "value": 0.1 },
+      { "resource": "base.LETTUCE", "value": 0.1 },
+      { "resource": "base.COOKED_CHICKEN", "value": 0.1 },
+      { "resource": "base.TOMATO", "value": 0.1 }
+    ],
+    "outputs": [
+      { "resource": "base.SANDWICH", "value": 0.1 }
+    ]
+  }
+]

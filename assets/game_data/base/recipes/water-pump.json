@@ -1,0 +1,22 @@
+[
+  {
+    "key": "WORKER",
+    "name": "Produce Water (Worker)",
+    "powerConsumption": 0.5,
+    "maxWorkers": 1,
+    "inputs": [],
+    "outputs": [
+      { "resource": "base.WATER", "value": 1.0 }
+    ]
+  },
+  {
+    "key": "AUTOMATED",
+    "name": "Produce Water (Automated)",
+    "powerConsumption": 1.0,
+    "maxWorkers": 0,
+    "inputs": [],
+    "outputs": [
+      { "resource": "base.WATER", "value": 0.5 }
+    ]
+  }
+]
