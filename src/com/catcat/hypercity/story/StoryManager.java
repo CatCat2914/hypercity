@@ -203,15 +203,15 @@ public class StoryManager {
         );
         quests.add(
             new Quest(city,
-                "Your town can support itself, but it is not ready to produce extra resources yet. One of the most important basic functions of the game is the \"Rates\" tab. It provides information on how much of each resource is consumed/produced, assuming all inputs are satisfied. This information can be used to calculate how many of each building you'll need in order to get the desired amount of product. Rather than placing new buildings, you can scale up most buildings in the \"Recipes\" tab, which is equivalent to placing more buildings. If you don't want to calculate, you can also use the \"Resources\" tab to see if your resources are increasing overall.\n\nUsing the scale tool, optimize the scale of your buildings to achieve a population of 42 and have 750 electricity.",
+                "Your town can support itself, but it is not ready to produce extra resources yet. One of the most important basic functions of the game is the \"Rates\" tab. It provides information on how much of each resource is consumed/produced, assuming all inputs are satisfied. This information can be used to calculate how many of each building you'll need in order to get the desired amount of product. Rather than placing new buildings, you can scale up most buildings in the \"Recipes\" tab, which is equivalent to placing more buildings. If you don't want to calculate, you can also use the \"Resources\" tab to see if your resources are increasing overall.\n\nUsing the scale tool, optimize the scale of your buildings to achieve a population of 36 and have 650 electricity.",
                 new Predicate<City>() {
-                    final Predicate<City> populationCheck = makeDurationCondition(city -> city.getWorkers() >= 42,5000);
+                    final Predicate<City> populationCheck = makeDurationCondition(city -> city.getWorkers() >= 36,5000);
                     /**
-                     * Using the scale tool, optimize the scale of your buildings to achieve a population of 42 and have 750 electricity.
+                     * Using the scale tool, optimize the scale of your buildings to achieve a population of 36 and have 650 electricity.
                      */
                     @Override
                     public boolean test(City city) {
-                        return city.getElectricity()>=750f && populationCheck.test(city);
+                        return city.getElectricity()>=650 && populationCheck.test(city);
                     }
                 },
                 () -> {

@@ -31,8 +31,6 @@ import com.catcat.hypercity.loaders.ResourceLoader;
 import com.catcat.hypercity.screens.MainMenuScreen;
 import com.catcat.hypercity.story.StoryManager;
 
-import java.util.Arrays;
-
 //todo: do game balancing
 // TODO: 12/29/25 actually add education (productivity boost), would be slight challenge
 // TODO: 1/26/26 car manufacturing?
@@ -96,8 +94,8 @@ public class CityGame extends Game implements Json.Serializable {
         String[] raw = Gdx.files.internal("assets.txt").readString().split("\\r?\\n");
         Array<String> cleaned = new Array<>(raw.length);
 
-        for (int i = 0; i < raw.length; i++) {
-            String line = raw[i];
+        for (String s : raw) {
+            String line = s;
             line = line.trim();
 
             // strip x:y: prefix, any leading slash, and trailing :num:num
@@ -109,7 +107,6 @@ public class CityGame extends Game implements Json.Serializable {
             // only keep files
             if (!line.contains(".")) continue;
             cleaned.add(line);
-            Gdx.app.log("[line]", line);
         }
         String[] output = new String[cleaned.size];
         for (int i = 0; i < cleaned.size; i++) {
