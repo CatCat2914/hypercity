@@ -61,6 +61,7 @@ public class CityGame extends Game implements Json.Serializable {
         BuildingLoader.load(packs);
         RecipeRegistry.register();
         campaignManager = new CampaignManager();
+        Gdx.app.log("ASSETS", "debugging");
         String[] assetsLines = Gdx.files.internal("assets.txt").readString().split("\\r?\\n");
         for (String path : assetsLines) {
             path = path.trim();
