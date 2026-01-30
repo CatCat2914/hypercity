@@ -53,7 +53,6 @@ public class CityGame extends Game implements Json.Serializable {
 
     @Override
     public void create() {
-        Gdx.app.log("debug",Arrays.toString(Gdx.files.internal("").list()));
         batch = new SpriteBatch();
         skin = new Skin(Gdx.files.internal("ui/uiskin.json"));
         FileHandle[] packs = getPacks(); // get all the packs
@@ -64,7 +63,7 @@ public class CityGame extends Game implements Json.Serializable {
         BuildingLoader.load(packs);
         RecipeRegistry.register();
         campaignManager = new CampaignManager();
-        String[] assetsLines = Gdx.files.internal("assets.txt").readString().split("\\r?\\n");
+        String[] assetsLines = getAssetIndexes();
         for (String path : assetsLines) {
             path = path.trim();
             if (path.isEmpty()) continue;
@@ -93,6 +92,32 @@ public class CityGame extends Game implements Json.Serializable {
         mainMenuMusic.setVolume(.5f);
     }
 
+    private String[] getAssetIndexes() {
+        String[] raw = Gdx.files.internal("assets.txt").readString().split("\\r?\\n");
+        Array<String> cleaned = new Array<>(raw.length);
+
+        for (int i = 0; i < raw.length; i++) {
+            String line = raw[i];
+            line = line.trim();
+
+            // strip x:y: prefix, any leading slash, and trailing :num:num
+            line = line.replaceAll(
+                "^[a-zA-Z]:[a-zA-Z]:/?([^\\n]*\\.[^\\n]*?)(:\\d+)+$",
+                "$1"
+            );
+
+            // only keep files
+            if (!line.contains(".")) continue;
+            cleaned.add(line);
+            Gdx.app.log("[line]", line);
+        }
+        String[] output = new String[cleaned.size];
+        for (int i = 0; i < cleaned.size; i++) {
+            output[i] = cleaned.get(i);
+        }
+        return output;
+    }
+
     @Override
     public void render() { //I can use this to simulate things like updating the story mode city, potentially.
         super.render(); // important!
@@ -119,13 +144,9 @@ public class CityGame extends Game implements Json.Serializable {
     }
 
     private FileHandle[] getPacks() {
-        String[] lines = Gdx.files.internal("assets.txt")
-            .readString()
-            .split("\\r?\\n");
-
+        String[] lines = getAssetIndexes();
         ObjectSet<String> packNames = new ObjectSet<>();
         for (String line : lines) {
-            line = line.trim();
             if (!line.startsWith("game_data/")) continue;
             String[] parts = line.split("/");
             if (parts.length >= 2) {

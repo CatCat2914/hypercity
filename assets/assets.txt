@@ -86,6 +86,7 @@ i:b:/audio/Audioinsmusic - Journey.mp3:21982606:1
 i:b:/audio/Lena Raine - Labyrinthine.mp3:7254059:1
 i:b:/audio/Meninjau - Noctara.mp3:6641568:1
 i:b:/worker.png:513:1
+i:b:/assets.txt:0:1
 i:b:/electricity.png:438:1
 i:b:/bg.png:682452:1
 c:b:/com/badlogic/gdx/utils/lsans-15.png:10270:1
