@@ -58,15 +58,15 @@ public class ElectricityDisplay extends Table {
         }
         super.act(delta);
     }
-
+    @SuppressWarnings("DefaultLocale")
     private String getLabelString(float avgChange) {
-        String labelString = "Electricity: " + Math.round(city.getElectricity() * 100f) / 100f + "\n(dx: " + Math.round(avgChange * 100f) / 100f;
+        String labelString = "Electricity: " + String.format("%.2f", city.getElectricity()) + "\n(dx: " + String.format("%.2f",avgChange);
         if (city.getElectricity() > City.MAX_E_THRESHOLD) {
-            labelString += ", loss: " + Math.round((100 * (1 - (float)Math.exp(-City.HIGH_E_DECAY * (city.getElectricity() - City.MAX_E_THRESHOLD)))) * 100f) / 100f + "%";
+            labelString += ", loss: " + String.format("%.2f", (100 * (1 - (float)Math.exp(-City.HIGH_E_DECAY * (city.getElectricity() - City.MAX_E_THRESHOLD))))) + "%";
         } else if (city.getElectricity() < City.MIN_E_THRESHOLD) {
             float normalized = Math.max(0f, city.getElectricity()) / (City.MIN_E_THRESHOLD);
             float ratio = normalized * normalized * (3 - 2 * normalized);
-            labelString += ", ratio: " + Math.round(ratio * 100 * 100f) / 100f + "%";
+            labelString += ", ratio: " + String.format("%.2f", ratio * 100) + "%";
         }
         return labelString;
     }

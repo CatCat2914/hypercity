@@ -44,7 +44,7 @@ i:b:/game_data/base/textures/materials/coal-ore.png:420:1
 i:b:/game_data/base/textures/materials/bread.png:390:1
 i:b:/game_data/base/textures/materials/potato.png:402:1
 i:b:/game_data/base/textures/materials/corn.png:582:1
-i:b:/game_data/base/textures/materials/wheat.png:573:1
+i:b:/game_data/base/textures/materials/wheat.png:483:1
 i:b:/game_data/base/textures/materials/waste.png:864:1
 i:b:/game_data/base/textures/materials/carrot.png:378:1
 i:b:/game_data/base/textures/materials/flour.png:261:1

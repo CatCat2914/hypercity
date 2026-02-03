@@ -8,7 +8,6 @@ import com.catcat.hypercity.definitions.resource.ResourceDefinition;
 import com.catcat.hypercity.loaders.ResourceLoader;
 
 public class RecipeEntry implements Json.Serializable {
-    // TODO: 1/28/26 this will represent an item or a tag or a tag + attribute combo. It will replace the string in the maps of the recipe.
     public String resource;
     public String tag;
     public String attribute;

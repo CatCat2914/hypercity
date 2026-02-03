@@ -1,7 +1,6 @@
 package com.catcat.hypercity.display.resources;
 
 import com.badlogic.gdx.graphics.Color;
-import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.scenes.scene2d.ui.Label;
 import com.badlogic.gdx.scenes.scene2d.ui.Table;
 import com.catcat.hypercity.city.City;
@@ -33,19 +32,13 @@ public class ResourceDisplay extends Table {
         this.row();
     }
 
-    // FIXME: 1/28/26 negative seems to have 3 decimal places
-    private String format2(float value) {
-        int intPart = (int)Math.abs(value);
-        int decimalPart = (int)Math.abs((value - intPart) * 100);
-        return intPart + "." + (decimalPart < 10 ? "0" : "") + decimalPart;
-    }
-
+    @SuppressWarnings("DefaultLocale")
     @Override
     public void act(float delta) {
         float changeRate = inventory.getChangeRate(resource);
         label.setText(resource.name + ": " +
-            format2(inventory.getAmount(resource)) +
-            " (dx: " + (changeRate >= 0 ? "+" : "-") + format2(changeRate) + ")");
+            String.format("%.2f", inventory.getAmount(resource)) +
+            " (dx: " + String.format("%+.2f", changeRate));
         // Change color based on whether the resource is increasing or decreasing
         if (changeRate >= 0.005f) {
             label.setColor(Color.GREEN);
@@ -55,10 +48,6 @@ public class ResourceDisplay extends Table {
             label.setColor(Color.WHITE); // basically no change
         }
         getChildren().forEach(actor -> actor.act(delta));
-    }
-
-    private ResourceDefinition getResource() {
-        return resource;
     }
 
     @Override

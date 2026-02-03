@@ -1,6 +1,5 @@
 package com.catcat.hypercity;
 
-import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Screen;
@@ -79,9 +78,7 @@ public class CityGame extends Game implements Json.Serializable {
         //noinspection StatementWithEmptyBody
         while (!assets.update()); //wait
         storyManager = new StoryManager(this);
-        if (Gdx.app.getType() != Application.ApplicationType.WebGL) {//fixme this is temporary so it can get running (makes it not load saved data)
-            load();
-        }
+        load();
         storyManager.onStart();
 
         this.mainMenu = new MainMenuScreen(this);
@@ -190,6 +187,7 @@ public class CityGame extends Game implements Json.Serializable {
         Json json = new Json();
         addClassTags(json);
         Gdx.files.local("save.json").writeString(json.toJson(this), false);
+        Gdx.app.log("SAVE", "Game saved successfully!");
     }
 
     private void load() {

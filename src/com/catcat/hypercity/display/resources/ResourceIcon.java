@@ -20,7 +20,6 @@ import com.catcat.hypercity.display.ui.AutoResizeWindow;
 import com.catcat.hypercity.loaders.RecipeRegistry;
 
 public class ResourceIcon extends Image {
-    // TODO: 1/22/26 add a back button to go to the last window (and so on) 
     private static AutoResizeWindow activeWindow;
     private static final Array<AutoResizeWindow> windowStack = new Array<>();
     public ResourceIcon(ResourceDefinition definition, City city){
@@ -56,10 +55,10 @@ public class ResourceIcon extends Image {
 
                 for (RecipeRegistry.RecipeData recipeData : new Array.ArrayIterable<>(RecipeRegistry.getAll())) {
                     if (containsResource(recipeData.recipe.getOutputs(), definition)) {
-                        obtainedBy.add(new RecipeDisplay(recipeData, city)).row();
+                        obtainedBy.add(new RecipeDisplay(recipeData, definition, city)).row();
                     }
                     if (containsResource(recipeData.recipe.getInputs(), definition)) {
-                        uses.add(new RecipeDisplay(recipeData, city));
+                        uses.add(new RecipeDisplay(recipeData, definition, city));
                     }
                 }
 

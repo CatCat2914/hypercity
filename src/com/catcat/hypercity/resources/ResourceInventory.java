@@ -51,22 +51,23 @@ public class ResourceInventory implements Json.Serializable{
         }
     }
 
-    @Override
+    @SuppressWarnings("DefaultLocale")
     public String toString() {
         StringBuilder sb = new StringBuilder("ResourceInventory{");
         for (ResourceDefinition resource : new ObjectMap.Keys<>(resources)) {
             ResourceData data = resources.get(resource);
             sb.append(resource.key)
                 .append(": ")
-                .append(Math.round(data.amount * 100f) / 100f) // 2 decimals
+                .append(String.format("%.2f", data.amount)) // 2 decimals
                 .append(" (Δ/s: ")
-                .append(Math.round(getChangeRate(resource) * 100f) / 100f)
+                .append(String.format("%.2f", getChangeRate(resource)))
                 .append("), ");
         }
         if (!resources.isEmpty()) sb.setLength(sb.length() - 2); // remove trailing comma
         sb.append("}");
         return sb.toString();
     }
+
 
     public void transferResource(ResourceDefinition resource, ResourceInventory inventory, float amount) {
         inventory.addAmount(resource, amount);

@@ -100,7 +100,6 @@ public class City implements Json.Serializable {
     //<editor-fold desc="Save/Load">
     @Override
     public void write(Json json) {
-        // TODO: 11/19/25 save camera position and zoom (new cityScreen(Camera) constructor?)
         json.writeValue("name", name);
         json.writeValue("gameTime", Math.floor(gameTime));
         json.writeValue("cityInventory", cityInventory, ResourceInventory.class);

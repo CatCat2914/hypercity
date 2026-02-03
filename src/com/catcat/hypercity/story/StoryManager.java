@@ -5,6 +5,7 @@ import com.badlogic.gdx.utils.Array;
 import com.badlogic.gdx.utils.TimeUtils;
 import com.catcat.hypercity.CityGame;
 import com.catcat.hypercity.building.Building;
+import com.catcat.hypercity.building.behavior.recipe.RecipeBuildingBehavior;
 import com.catcat.hypercity.city.City;
 import com.catcat.hypercity.definitions.building.BuildingDefinition;
 import com.catcat.hypercity.loaders.BuildingLoader;
@@ -41,26 +42,27 @@ public class StoryManager {
         quests.add(
             new Quest(city,
                 "Welcome to Story Mode! The flat grassland you will build your city on stretches as far as the eye can see. There is no sign of civilization... for now. Soon, that will all change. This grassland will be the site for the greatest city the world has ever seen. But first, you must look around.\n This game uses a top-down view. You can left click and drag anywhere on the screen to move around, and scroll to zoom in or out. Try it out!\n\nZoom in to 1.1x, zoom out to 0.9x, and move 50 meters from the center.",
-                new Predicate<City>(){
+                new Predicate<>() {
                     boolean hasZoomedIn = false;
                     boolean hasZoomedOut = false;
                     boolean hasMovedFromCenter = false;
+
                     /**
                      * Zoom in to 1.1x, zoom out to 0.9x, and move 50 meters from the center.
                      */
                     @Override
                     public boolean test(City city) {
                         OrthographicCamera camera = ((OrthographicCamera)city.screen.stage.getCamera());
-                        if(camera.zoom > 1.1){
+                        if (camera.zoom > 1.1) {
                             hasZoomedIn = true;
                         }
-                        if(camera.zoom < 0.9){
+                        if (camera.zoom < 0.9) {
                             hasZoomedOut = true;
                         }
-                        if(camera.position.len() > 50f){
+                        if (camera.position.len() > 50f) {
                             hasMovedFromCenter = true;
                         }
-                        return hasZoomedOut&&hasZoomedIn&&hasMovedFromCenter;
+                        return hasZoomedOut && hasZoomedIn && hasMovedFromCenter;
                     }
                 },
                 () -> {
@@ -71,7 +73,7 @@ public class StoryManager {
         quests.add(
             new Quest(city,
                 "After looking around, you've decided that this is a great place to build a city. The land is fertile, but also ready to handle the weight of any amount of buildings you choose to build. For your future city, you'll need to have a steady source of food and water for your citizens. You have unlocked Water Pumps and Farms, and you'll need to place these in order to make food. To place a building, expand the category the building is in, click the \"Place\" button, and then click where you want to build it. Buildings are free and are built instantly.\n\nPlace 1 Farm and 1 Water Pump.",
-                new Predicate<City>(){
+                new Predicate<>() {
                     /**
                      * Place 1 Farm and 1 Water Pump.
                      */
@@ -79,26 +81,25 @@ public class StoryManager {
                     public boolean test(City city) {
                         boolean hasFarm = false;
                         boolean hasPump = false;
-                        for(Building building:city.getAllBuildings()) {
-                            hasFarm = hasFarm||building.isOfType("base.FARM");
-                            hasPump = hasPump||building.isOfType("base.WATER_PUMP");
+                        for (Building building : city.getAllBuildings()) {
+                            hasFarm = hasFarm || building.isOfType("base.FARM");
+                            hasPump = hasPump || building.isOfType("base.WATER_PUMP");
                         }
-                        return hasFarm&&hasPump;
+                        return hasFarm && hasPump;
                     }
                 })
         );
         quests.add(
             new Quest(city,
-                "Great! Both buildings have been built, but right now, the farm won't work because it doesn't have water. To transport resources from one building to another, you need to build a road. Roads in this game are one-way roads. To make a road, click on the source building (in this case, the water pump) to open the building window. The building window has multiple tabs, each of which serves an important purpose. In the \"Info\" tab, you’ll see a button labeled \"Add/Remove Road.\" Click this button, then click the target building (the farm). If the window is blocking the farm, you can drag it elsewhere.\n\nConnect a road from the Water Pump to the Farm.",
-                new Predicate<City>() {
+                "Great! Both buildings have been built, but right now, the farm won't work because it doesn't have water. To transport resources from one building to another, you need to build a road. Roads in this game are one-way roads. To make a road, click on the source building (in this case, the water pump) to open the building window. The building window has multiple tabs, each of which serves an important purpose. In the \"Info\" tab, you'll see a button labeled \"Add/Remove Road.\" Click this button, then click the target building (the farm). If the window is blocking the farm, you can drag it elsewhere.\n\nConnect a road from the Water Pump to the Farm.",
+                new Predicate<>() {
                     /**
                      * Connect a road from the Water Pump to the Farm.
                      */
                     @Override
                     public boolean test(City city) {
                         for (Building building : city.getAllBuildings()) {
-                            if(building.isOfType("base.WATER_PUMP") && building.hasRoadTo("base.FARM"))
-                            {
+                            if (building.isOfType("base.WATER_PUMP") && building.hasRoadTo("base.FARM")) {
                                 return true;
                             }
                         }
@@ -113,16 +114,33 @@ public class StoryManager {
         );
         quests.add(
             new Quest(city,
-                "The farm is ready to produce food once you get people, but you still need to have a steady supply of electricity for your city. Right now, your only option is to use coal power, but you'll unlock more ways later. You need to get coal from the mine and transport it to the coal power plant.\nTo maximize efficiency, you should click on the \"Recipes\" tab in the mine, and switch it to \"Prioritize Coal.\" With this recipe, you produce more coal but less of other resources.\n\nConnect a mine to a coal power plant.",
-                new Predicate<City>() {
+                "The farm is ready to produce food once you get people, but you still need to have a steady supply of electricity for your city. Right now, your only option is to use coal power, but you'll unlock more ways later. You need to get coal from the mine and transport it to the coal power plant.\n\nConnect a mine to a coal power plant.",
+                new Predicate<>() {
                     /**
                      * Connect a mine to a coal power plant.
                      */
                     @Override
                     public boolean test(City city) {
                         for (Building building : city.getAllBuildings()) {
-                            if(building.isOfType("base.MINE") && building.hasRoadTo("base.COAL_POWER_PLANT"))
-                            {
+                            if (building.isOfType("base.MINE") && building.hasRoadTo("base.COAL_POWER_PLANT")) {
+                                return true;
+                            }
+                        }
+                        return false;
+                    }
+                })
+        );
+        quests.add(
+            new Quest(city,
+                "To maximize efficiency, you should click on the \"Recipes\" tab in the mine, and switch it to \"Prioritize Coal.\" With this recipe, you produce more coal but less of other resources.\n\nSwitch the recipe in the mine to the \"Prioritize Coal\" recipe.",
+                new Predicate<>() {
+                    /**
+                     * Connect a mine to a coal power plant.
+                     */
+                    @Override
+                    public boolean test(City city) {
+                        for (Building building : city.getAllBuildings()) {
+                            if (building.isOfType("base.MINE") && ((RecipeBuildingBehavior)building.behavior).getCurrentRecipe().getKey().equals("COAL")) {
                                 return true;
                             }
                         }
@@ -133,9 +151,9 @@ public class StoryManager {
         quests.add(
             new Quest(city,
                 "Your city is almost ready to move its first people in! All that's left is prioritizing all of these buildings. You can find it in the \"Info\" tab. Prioritizing a building makes workers work there first. Workers are distributed in order of when the building was placed, but by prioritizing a building you can force workers to work there first. Notably, workers do not need roads. They use an interconnected underground tunnel system, so that the roads are open for transporting resources.\n\nPrioritize the water pump, the farm, the mine, and the coal power plant.",
-                new Predicate<City>() {
+                new Predicate<>() {
                     /**
-                     * Prioritize the water pump, the farm, the mine, and the coal power plant.
+                     * Switch the mine's recipe to "Prioritize Coal."
                      */
                     @Override
                     public boolean test(City city) {
@@ -147,16 +165,16 @@ public class StoryManager {
                         for (Building building : city.getAllBuildings()) {
                             if (!building.isPrioritized()) continue;
 
-                            if (building.isOfType("base.WATER_PUMP")){
+                            if (building.isOfType("base.WATER_PUMP")) {
                                 hasWaterPump = true;
                             }
-                            if (building.isOfType("base.FARM")){
+                            if (building.isOfType("base.FARM")) {
                                 hasFarm = true;
                             }
-                            if (building.isOfType("base.MINE")){
+                            if (building.isOfType("base.MINE")) {
                                 hasMine = true;
                             }
-                            if (building.isOfType("base.COAL_POWER_PLANT")){
+                            if (building.isOfType("base.COAL_POWER_PLANT")) {
                                 hasCoalPlant = true;
                             }
 
@@ -174,7 +192,7 @@ public class StoryManager {
         quests.add(
             new Quest(city,
                 "You finally have everything you need for a self-sustaining population! Once you place a house, you'll receive 10 seconds of complimentary resources, which gives you time to connect roads to supply the house with resources. If you run out of time, the people will move out. Don't worry, just delete the house and try again.\nIt is recommended that you connect the water pump to the house first, and then connect the farm to the house. On computer, you can right-click a building to begin adding a road (and then left-click the target), which serves as a shortcut to pressing the add road button. Whenever you're ready, start your city!\n\nMaintain a population of 6 or more for 15 seconds.",
-                new Predicate<City>() {
+                new Predicate<>() {
                     long timeAchieved = -1L;
 
                     /**
@@ -203,15 +221,16 @@ public class StoryManager {
         );
         quests.add(
             new Quest(city,
-                "Your town can support itself, but it is not ready to produce extra resources yet. One of the most important basic functions of the game is the \"Rates\" tab. It provides information on how much of each resource is consumed/produced, assuming all inputs are satisfied. This information can be used to calculate how many of each building you'll need in order to get the desired amount of product. Rather than placing new buildings, you can scale up most buildings in the \"Recipes\" tab, which is equivalent to placing more buildings. If you don't want to calculate, you can also use the \"Resources\" tab to see if your resources are increasing overall.\n\nUsing the scale tool, optimize the scale of your buildings to achieve a population of 36 and have 650 electricity.",
-                new Predicate<City>() {
-                    final Predicate<City> populationCheck = makeDurationCondition(city -> city.getWorkers() >= 36,5000);
+                "Your town can support itself, but it is not ready to produce extra resources yet. One of the most important basic functions of the game is the \"Recipes\" tab. It contains rates for the current recipe, the ability to switch recipe, and the ability to scale up buildings, which is equivalent to placing more buildings. If you don't want to calculate the optimal ratio, you can also use the \"Resources\" tab to see if your resources are increasing overall.\n\nUsing the scale tool, optimize the scale of your buildings to achieve a population of 36 and have 650 electricity.",
+                new Predicate<>() {
+                    final Predicate<City> populationCheck = makeDurationCondition(city -> city.getWorkers() >= 36, 5000);
+
                     /**
                      * Using the scale tool, optimize the scale of your buildings to achieve a population of 36 and have 650 electricity.
                      */
                     @Override
                     public boolean test(City city) {
-                        return city.getElectricity()>=650 && populationCheck.test(city);
+                        return city.getElectricity() >= 650 && populationCheck.test(city);
                     }
                 },
                 () -> {
@@ -232,7 +251,7 @@ public class StoryManager {
         quests.add(
             new Quest(city,
                 "Great! Your city is now ready to produce extra supplies! You’ve also unlocked the Depot building. Depots allow you to access your city storage. Every depot shares the same inventory. If you add a road going to a depot, resources are sent to the city storage. If you add a road from a depot, resources will be taken out of the city storage.\nA neighboring city needs water. Deliver 20 units of water to the city storage so it can be sent to them. In return, they promise to teach you about an important building.\n\nDeliver 20 units of water to the city storage.",
-                new Predicate<City>() {
+                new Predicate<>() {
                     /**
                      * Deliver 20 units of water to the city storage.
                      */
@@ -293,8 +312,9 @@ public class StoryManager {
      * @return the predicate that checks the range of time
      */
     private Predicate<City> makeDurationCondition(Predicate<City> condition, int millis) {
-        return new Predicate<City>() {
+        return new Predicate<>() {
             long timeAchieved = -1L;
+
             @Override
             public boolean test(City city) {
                 boolean withinRange = condition.test(city);
