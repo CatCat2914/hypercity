@@ -1,0 +1,26 @@
+[
+  {
+    "key": "DIESEL_PRODUCTION",
+    "name": "Diesel Production",
+    "unlocks": [
+      "base.REACTOR.OIL_DIESEL"
+    ],
+    "requiredResearch": [],
+    "resourceCost": [
+      { "resource": "base.OIL", "value": 20.0 }
+    ],
+    "requiresAll": false
+  },
+  {
+    "key": "IRON_SMELTING",
+    "name": "iron smelting",
+    "unlocks": [
+      "base.FACTORY.IRON"
+    ],
+    "requiredResearch": ["base.DIESEL_PRODUCTION"],
+    "resourceCost": [
+      { "resource": "base.IRON_ORE", "value": 1.0 }
+    ],
+    "requiresAll": false
+  }
+]
