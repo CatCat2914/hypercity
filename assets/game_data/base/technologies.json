@@ -1,26 +1,233 @@
 [
   {
-    "key": "DIESEL_PRODUCTION",
-    "name": "Diesel Production",
-    "unlocks": [
-      "base.REACTOR.OIL_DIESEL"
-    ],
+    "key": "FORESTRY",
+    "name": "Forestry",
     "requiredResearch": [],
-    "resourceCost": [
-      { "resource": "base.OIL", "value": 20.0 }
-    ],
-    "requiresAll": false
+    "resourceCost": [{ "resource": "base.WATER", "value": 3.0 }],
+    "unlocks": [
+      "base.TREE.WOOD"
+    ]
   },
   {
-    "key": "IRON_SMELTING",
-    "name": "iron smelting",
+    "key": "AGRICULTURE",
+    "name": "Agriculture",
+    "requiredResearch": [],
+    "resourceCost": [{ "resource": "base.TOMATO", "value": 10.0 }],
+    "unlocks": [
+      "base.FARM.POTATO",
+      "base.FARM.CARROT"
+    ]
+  },
+  {
+    "key": "MINING",
+    "name": "Mining",
+    "requiredResearch": ["base.FORESTRY"],
+    "resourceCost": [{ "resource": "base.WOOD", "value": 10.0 }],
+    "unlocks": [
+      "base.MINE.EVERYTHING"
+    ]
+  },
+  {
+    "key": "CONSTRUCTION",
+    "name": "Construction",
+    "requiredResearch": ["base.FORESTRY"],
+    "resourceCost": [{ "resource": "base.WOOD", "value": 15.0 }],
+    "unlocks": [
+      "base.FACTORY.PLANKS"
+    ]
+  },
+  {
+    "key": "GRAIN",
+    "name": "Grain",
+    "requiredResearch": ["base.AGRICULTURE"],
+    "resourceCost": [{ "resource": "base.WATER", "value": 70.0 }],
+    "unlocks": [
+      "base.FARM.CORN",
+      "base.FARM.WHEAT"
+    ]
+  },
+  {
+    "key": "COAL_MINING",
+    "name": "Coal Mining",
+    "requiredResearch": ["base.MINING"],
+    "resourceCost": [{ "resource": "base.ROCK", "value": 15.0 }],
+    "unlocks": [
+      "base.COAL_POWER_PLANT.USE_COAL",
+      "base.MINE.COAL"
+    ]
+  },
+  {
+    "key": "MILLING",
+    "name": "Milling",
+    "requiredResearch": ["base.MINING", "base.GRAIN", "base.CONSTRUCTION"],
+    "resourceCost": [
+      { "resource": "base.ROCK", "value": 10.0 },
+      { "resource": "base.PLANKS", "value": 5.0 },
+      { "resource": "base.WHEAT", "value": 25.0 }
+    ],
+    "unlocks": [
+      "base.MILL.WHEAT_FLOUR"
+    ]
+  },
+  {
+    "key": "CHICKEN_COOP",
+    "name": "Chicken Coop",
+    "requiredResearch": ["base.GRAIN", "base.CONSTRUCTION"],
+    "resourceCost": [
+      { "tag": "ANIMAL_FEED", "value": 25 },
+      { "resource": "base.PLANKS", "value": 10.0 }
+    ],
+    "unlocks": [
+      "base.FARM.CHICKEN_MEAT"
+    ]
+  },
+  {
+    "key": "ADVANCED_AGRICULTURE",
+    "name": "Advanced Agriculture",
+    "requiredResearch": ["base.GRAIN"],
+    "resourceCost": [
+      { "resource": "base.CORN", "value": 10.0 },
+      { "resource": "base.CARROT", "value": 10.0 },
+      { "resource": "base.WHEAT", "value": 10.0 },
+      { "resource": "base.TOMATO", "value": 10.0 },
+      { "resource": "base.POTATO", "value": 10.0 }
+    ],
+    "unlocks": [
+      "base.FARM.LETTUCE",
+      "base.FARM.ONION"
+    ]
+  },
+  {
+    "key": "IRON_MINING",
+    "name": "Iron Mining",
+    "requiredResearch": ["base.COAL_MINING"],
+    "resourceCost": [{ "resource": "base.COAL_ORE", "value": 25.0 }],
+    "unlocks": [
+      "base.MINE.IRON"
+    ]
+  },
+  {
+    "key": "FURNACES",
+    "name": "Furnaces",
+    "requiredResearch": ["base.COAL_MINING"],
+    "resourceCost": [
+      { "resource": "base.ROCK", "value": 10.0 },
+      { "resource": "base.COAL_ORE", "value": 5.0 }
+    ]
+  },
+  {
+    "key": "COW_BARN",
+    "name": "Cow Barn",
+    "requiredResearch": ["base.CHICKEN_COOP"],
+    "resourceCost": [
+      { "tag": "ANIMAL_FEED", "value": 25 },
+      { "resource": "base.PLANKS", "value": 35.0 }
+    ],
+    "unlocks": [
+      "base.FARM.MILK"
+    ]
+  },
+  {
+    "key": "ECONOMY",
+    "name": "Economy",
+    "requiredResearch": ["base.ADVANCED_AGRICULTURE"],
+    "resourceCost": [
+      { "resource": "base.WHEAT", "value": 100.0 }
+    ],
+    "unlocks": [
+      "base.MARKET.SELL"
+    ]
+  },
+  {
+    "key": "QUARRYING",
+    "name": "Quarrying",
+    "requiredResearch": ["base.IRON_MINING"],
+    "resourceCost": [{ "resource": "base.IRON_INGOT", "value": 3.0 }],
+    "unlocks": [
+      "base.MINE.ROCKS"
+    ]
+  },
+  {
+    "key": "SMELTING",
+    "name": "Smelting",
+    "requiredResearch": ["base.IRON_MINING", "base.FURNACES"],
+    "resourceCost": [{ "resource": "base.IRON_ORE", "value": 5.0 }],
     "unlocks": [
       "base.FACTORY.IRON"
-    ],
-    "requiredResearch": ["base.DIESEL_PRODUCTION"],
+    ]
+  },
+  {
+    "key": "BAKING",
+    "name": "Baking",
+    "requiredResearch": ["base.MILLING", "base.FURNACES"],
+    "resourceCost": [{ "resource": "base.FLOUR", "value": 10.0 }],
+    "unlocks": [
+      "base.BAKERY.BAKE_BREAD"
+    ]
+  },
+  {
+    "key": "COOKING",
+    "name": "Cooking",
+    "requiredResearch": ["base.FURNACES", "base.CHICKEN_COOP"],
     "resourceCost": [
-      { "resource": "base.IRON_ORE", "value": 1.0 }
+      { "resource": "base.COAL_ORE", "value": 10.0 },
+      { "resource": "base.WOOD", "value": 25.0 }
     ],
-    "requiresAll": false
+    "unlocks": [
+      "base.BAKERY.COOK_CHICKEN"
+    ]
+  },
+  {
+    "key": "CHEESE",
+    "name": "Cheese",
+    "requiredResearch": ["base.COW_BARN", "base.ADVANCED_AGRICULTURE"],
+    "resourceCost": [
+      { "resource": "base.MILK", "value": 10.0 },
+      { "resource": "base.ONION", "value": 5.0 }
+    ],
+    "unlocks": [
+      "base.BAKERY.CHEESE"
+    ]
+  },
+  {
+    "key": "OIL_MINING",
+    "name": "Oil Mining",
+    "requiredResearch": ["base.QUARRYING"],
+    "resourceCost": [{ "resource": "base.ROCK", "value": 45.0 }],
+    "unlocks": [
+      "base.OIL_WELL.EXTRACT_OIL"
+    ]
+  },
+  {
+    "key": "STEEL",
+    "name": "Steel",
+    "requiredResearch": ["base.SMELTING"],
+    "resourceCost": [{ "resource": "base.IRON_INGOT", "value": 12.0 }],
+    "unlocks": [
+      "base.FACTORY.STEEL"
+    ]
+  },
+  {
+    "key": "KITCHENS",
+    "name": "Kitchens",
+    "requiredResearch": ["base.BAKING", "base.COOKING", "base.CHEESE", "base.SMELTING"],
+    "resourceCost": [
+      { "resource": "base.PLANKS", "value": 30.0 },
+      { "resource": "base.IRON_INGOT", "value": 5.0 }
+    ],
+    "unlocks": [
+      "base.BAKERY.PIZZA",
+      "base.BAKERY.SANDWICH"
+    ]
+  },
+  {
+    "key": "DIESEL",
+    "name": "Diesel",
+    "requiredResearch": ["base.OIL_MINING"],
+    "resourceCost": [{ "resource": "base.OIL", "value": 40.0 }],
+    "unlocks": [
+      "base.GAS_GENERATOR.OIL_BASED",
+      "base.REACTOR.OIL_DIESEL"
+    ]
   }
 ]

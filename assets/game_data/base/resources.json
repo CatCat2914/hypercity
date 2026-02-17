@@ -140,10 +140,10 @@
     "name": "Cooked Chicken Meat",
     "category": "Food/Prepped Meals",
     "texturePath": "textures/materials/cooked-chicken.png",
-    "tags": ["SOLID", "COOKED", "COOKED_MEAT", "SELLABLE"],
+    "tags": ["SOLID", "COOKED", "COOKED_MEAT", "SELLABLE", "FOOD"],
     "attributes": {
       "sellValue": 3.40,
-      "foodValue": 3.8
+      "foodValue": 4.8
     }
   },
   {

@@ -15,7 +15,7 @@ i:b:/ui/uiskin.json:16175:1
 i:b:/right-arrow.png:879:1
 i:d:/game_data:0:1
 i:d:/game_data/base:0:1
-i:b:/game_data/base/buildings.json:3876:1
+i:b:/game_data/base/buildings.json:3602:1
 i:d:/game_data/base/textures:0:1
 i:d:/game_data/base/textures/buildings:0:1
 i:b:/game_data/base/textures/buildings/reactor.png:606:1
@@ -65,11 +65,11 @@ i:b:/game_data/base/textures/materials/lettuce.png:471:1
 i:b:/game_data/base/textures/materials/cooked-chicken.png:447:1
 i:b:/game_data/base/textures/materials/coin.png:450:1
 i:b:/game_data/base/textures/materials/iron-ingot.png:279:1
-i:b:/game_data/base/resources.json:6433:1
+i:b:/game_data/base/resources.json:6441:1
 i:d:/game_data/base/recipes:0:1
 i:b:/game_data/base/recipes/gas-generator.json:231:1
 i:b:/game_data/base/recipes/mine.json:1230:1
-i:b:/game_data/base/recipes/house.json:271:1
+i:b:/game_data/base/recipes/house.json:269:1
 i:b:/game_data/base/recipes/water-pump.json:425:1
 i:b:/game_data/base/recipes/coal-power-plant.json:204:1
 i:b:/game_data/base/recipes/reactor.json:309:1
@@ -80,7 +80,7 @@ i:b:/game_data/base/recipes/farm.json:2377:1
 i:b:/game_data/base/recipes/bakery.json:1703:1
 i:b:/game_data/base/recipes/tree.json:253:1
 i:b:/game_data/base/recipes/oil-well.json:256:1
-i:b:/game_data/base/technologies.json:536:1
+i:b:/game_data/base/technologies.json:5824:1
 i:b:/placeholder.png:261:1
 i:d:/audio:0:1
 i:b:/audio/click.mp3:2925:1
@@ -88,6 +88,7 @@ i:b:/audio/Audioinsmusic - Journey.mp3:21982606:1
 i:b:/audio/Lena Raine - Labyrinthine.mp3:7254059:1
 i:b:/audio/Meninjau - Noctara.mp3:6641568:1
 i:b:/worker.png:513:1
+i:b:/white-pix.png:72:1
 i:b:/assets.txt:0:1
 i:b:/electricity.png:438:1
 i:b:/bg.png:3924:1

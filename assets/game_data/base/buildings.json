@@ -64,14 +64,6 @@
     "recipeFile": "recipes/mine.json"
   },
   {
-    "key": "SCRIPTING_MODULE",
-    "name": "Scripting Module",
-    "category": "Utility",
-    "texturePath": "textures/buildings/scripting-module.png",
-    "color": "000000",
-    "className": "com.catcat.hypercity.building.behavior.utility.ScriptingModuleBehavior"
-  },
-  {
     "key": "SOLAR_PANEL",
     "name": "Solar Panel",
     "category": "Power",
