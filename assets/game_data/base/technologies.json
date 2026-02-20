@@ -19,15 +19,6 @@
     ]
   },
   {
-    "key": "MINING",
-    "name": "Mining",
-    "requiredResearch": ["base.FORESTRY"],
-    "resourceCost": [{ "resource": "base.WOOD", "value": 10.0 }],
-    "unlocks": [
-      "base.MINE.EVERYTHING"
-    ]
-  },
-  {
     "key": "CONSTRUCTION",
     "name": "Construction",
     "requiredResearch": ["base.FORESTRY"],
@@ -37,10 +28,19 @@
     ]
   },
   {
+    "key": "MINING",
+    "name": "Mining",
+    "requiredResearch": ["base.FORESTRY"],
+    "resourceCost": [{ "resource": "base.WOOD", "value": 10.0 }],
+    "unlocks": [
+      "base.MINE.EVERYTHING"
+    ]
+  },
+  {
     "key": "GRAIN",
     "name": "Grain",
     "requiredResearch": ["base.AGRICULTURE"],
-    "resourceCost": [{ "resource": "base.WATER", "value": 70.0 }],
+    "resourceCost": [{ "resource": "base.WATER", "value": 35.0 }],
     "unlocks": [
       "base.FARM.CORN",
       "base.FARM.WHEAT"
@@ -59,7 +59,7 @@
   {
     "key": "MILLING",
     "name": "Milling",
-    "requiredResearch": ["base.MINING", "base.GRAIN", "base.CONSTRUCTION"],
+    "requiredResearch": ["base.GRAIN", "base.CONSTRUCTION"],
     "resourceCost": [
       { "resource": "base.ROCK", "value": 10.0 },
       { "resource": "base.PLANKS", "value": 5.0 },
@@ -193,7 +193,10 @@
     "key": "OIL_MINING",
     "name": "Oil Mining",
     "requiredResearch": ["base.QUARRYING"],
-    "resourceCost": [{ "resource": "base.ROCK", "value": 45.0 }],
+    "resourceCost": [
+      { "resource": "base.ROCK", "value": 45.0 },
+      { "resource": "base.IRON_INGOT", "value": 5.0 }
+    ],
     "unlocks": [
       "base.OIL_WELL.EXTRACT_OIL"
     ]
@@ -210,10 +213,11 @@
   {
     "key": "KITCHENS",
     "name": "Kitchens",
-    "requiredResearch": ["base.BAKING", "base.COOKING", "base.CHEESE", "base.SMELTING"],
+    "requiredResearch": ["base.BAKING", "base.COOKING", "base.CHEESE"],
     "resourceCost": [
       { "resource": "base.PLANKS", "value": 30.0 },
-      { "resource": "base.IRON_INGOT", "value": 5.0 }
+      { "resource": "base.BREAD", "value": 5.0 },
+      { "resource": "base.COOKED_CHICKEN", "value": 3.0 }
     ],
     "unlocks": [
       "base.BAKERY.PIZZA",
@@ -224,7 +228,10 @@
     "key": "DIESEL",
     "name": "Diesel",
     "requiredResearch": ["base.OIL_MINING"],
-    "resourceCost": [{ "resource": "base.OIL", "value": 40.0 }],
+    "resourceCost": [
+      { "resource": "base.OIL", "value": 40.0 },
+      { "resource": "base.STEEL_INGOT", "value": 2.0 }
+    ],
     "unlocks": [
       "base.GAS_GENERATOR.OIL_BASED",
       "base.REACTOR.OIL_DIESEL"

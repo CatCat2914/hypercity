@@ -80,7 +80,7 @@ i:b:/game_data/base/recipes/farm.json:2377:1
 i:b:/game_data/base/recipes/bakery.json:1703:1
 i:b:/game_data/base/recipes/tree.json:253:1
 i:b:/game_data/base/recipes/oil-well.json:256:1
-i:b:/game_data/base/technologies.json:5824:1
+i:b:/game_data/base/technologies.json:5981:1
 i:b:/placeholder.png:261:1
 i:d:/audio:0:1
 i:b:/audio/click.mp3:2925:1
@@ -91,7 +91,7 @@ i:b:/worker.png:513:1
 i:b:/white-pix.png:72:1
 i:b:/assets.txt:0:1
 i:b:/electricity.png:438:1
-i:b:/bg.png:3924:1
+i:b:/bg.png:263023:1
 c:b:/com/badlogic/gdx/utils/lsans-15.png:10270:1
 c:b:/com/badlogic/gdx/graphics/g3d/shaders/default.vertex.glsl:9096:1
 c:b:/com/badlogic/gdx/graphics/g3d/particles/particles.fragment.glsl:820:1
