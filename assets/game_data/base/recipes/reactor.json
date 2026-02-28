@@ -1,15 +1,21 @@
 [
   {
-    "key": "OIL_DIESEL",
-    "name": "Oil -> Diesel",
-    "powerConsumption": 1.5,
-    "maxWorkers": 2,
+    "key": "FRACTIONAL_DISTILLATION",
+    "name": "Separate Crude Oil",
+    "powerConsumption": 7.5,
+    "maxWorkers": 3,
     "inputs": [
-      { "resource": "base.OIL", "value": 1.0 }
+      { "resource": "base.OIL", "value": 3.0 }
     ],
     "outputs": [
-      { "resource": "base.DIESEL", "value": 0.4 },
-      { "resource": "base.WASTE", "value": 0.6 }
+      { "resource": "base.NATURAL_GAS", "value": 0.12 },
+      { "resource": "base.NAPHTHA", "value": 0.54 },
+      { "resource": "base.GASOLINE", "value": 0.66 },
+      { "resource": "base.KEROSENE", "value": 0.36 },
+      { "resource": "base.DIESEL", "value": 0.60 },
+      { "resource": "base.HEAVY_OIL", "value": 0.42 },
+      { "resource": "base.BITUMEN", "value": 0.18 },
+      { "resource": "base.RESIDUE", "value": 0.12 }
     ]
   }
 ]

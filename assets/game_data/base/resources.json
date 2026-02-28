@@ -4,7 +4,7 @@
     "name": "Wood Log",
     "category": "Materials/Woods",
     "texturePath": "textures/materials/wood.png",
-    "tags": ["SOLID", "LOG", "WOODEN", "SELLABLE"],
+    "tags": ["LOG", "WOODEN", "SELLABLE"],
     "attributes": {
       "sellValue": 0.6
     }
@@ -14,7 +14,7 @@
     "name": "Planks",
     "category": "Materials/Woods",
     "texturePath": "textures/materials/planks.png",
-    "tags": ["SOLID", "WOODEN", "SELLABLE"],
+    "tags": ["WOODEN", "SELLABLE"],
     "attributes": {
       "sellValue": 0.35
     }
@@ -23,36 +23,14 @@
     "key": "WATER",
     "name": "Water",
     "category": "Liquids",
-    "texturePath": "textures/materials/water.png",
-    "tags": ["LIQUID"]
-  },
-  {
-    "key": "OIL",
-    "name": "Oil",
-    "category": "Liquids/Oil Based",
-    "texturePath": "textures/materials/oil.png",
-    "tags": ["LIQUID", "SELLABLE"],
-    "attributes": {
-      "sellValue": 0.9
-    }
-  },
-  {
-    "key": "DIESEL",
-    "name": "Diesel",
-    "category": "Liquids/Oil Based",
-    "texturePath": "textures/materials/diesel.png",
-    "tags": ["LIQUID", "FUEL", "OIL_FUEL", "SELLABLE"],
-    "attributes": {
-      "fuelValue": 1.3,
-      "sellValue": 3.2
-    }
+    "texturePath": "textures/materials/water.png"
   },
   {
     "key": "ROCK",
     "name": "Rock",
     "category": "Materials/Ores",
     "texturePath": "textures/materials/rock.png",
-    "tags": ["SOLID", "SELLABLE"],
+    "tags": ["SELLABLE", "FULL_ROCK"],
     "attributes": {
       "sellValue": 0.01
     }
@@ -62,7 +40,7 @@
     "name": "Coal Ore",
     "category": "Materials/Ores",
     "texturePath": "textures/materials/coal-ore.png",
-    "tags": ["SOLID", "SELLABLE"],
+    "tags": ["SELLABLE"],
     "attributes": {
       "sellValue": 0.2
     }
@@ -72,7 +50,7 @@
     "name": "Iron Ore",
     "category": "Materials/Ores",
     "texturePath": "textures/materials/iron-ore.png",
-    "tags": ["SOLID", "SELLABLE"],
+    "tags": ["SELLABLE"],
     "attributes": {
       "sellValue": 0.3
     }
@@ -82,7 +60,7 @@
     "name": "Corn",
     "category": "Food/Crops",
     "texturePath": "textures/materials/corn.png",
-    "tags": ["SOLID", "FOOD", "ANIMAL_FEED", "SELLABLE"],
+    "tags": ["FOOD", "ANIMAL_FEED", "SELLABLE"],
     "attributes": {
       "foodValue": 0.65,
       "sellValue": 0.1
@@ -93,7 +71,7 @@
     "name": "Iron Ingot",
     "category": "Materials/Ingots",
     "texturePath": "textures/materials/iron-ingot.png",
-    "tags": ["SOLID", "METAL", "SELLABLE"],
+    "tags": ["METAL", "SELLABLE"],
     "attributes": {
       "sellValue": 1.1
     }
@@ -103,7 +81,7 @@
     "name": "Steel Ingot",
     "category": "Materials/Ingots",
     "texturePath": "textures/materials/steel-ingot.png",
-    "tags": ["SOLID", "METAL", "SELLABLE"],
+    "tags": ["METAL", "SELLABLE"],
     "attributes": {
       "sellValue": 3.8
     }
@@ -113,14 +91,14 @@
     "name": "Waste",
     "category": "Waste",
     "texturePath": "textures/materials/waste.png",
-    "tags": ["SOLID", "WASTE"]
+    "tags": ["WASTE"]
   },
   {
     "key": "WHEAT",
     "name": "Wheat",
     "category": "Food/Crops",
     "texturePath": "textures/materials/wheat.png",
-    "tags": ["SOLID", "ANIMAL_FEED", "SELLABLE"],
+    "tags": ["ANIMAL_FEED", "SELLABLE"],
     "attributes": {
       "sellValue": 0.12
     }
@@ -130,7 +108,7 @@
     "name": "Raw Chicken Meat",
     "category": "Food/Ingredients",
     "texturePath": "textures/materials/raw-chicken.png",
-    "tags": ["SOLID", "RAW", "RAW_MEAT", "SELLABLE"],
+    "tags": ["RAW", "RAW_MEAT", "SELLABLE"],
     "attributes": {
       "sellValue": 0.24
     }
@@ -140,7 +118,7 @@
     "name": "Cooked Chicken Meat",
     "category": "Food/Prepped Meals",
     "texturePath": "textures/materials/cooked-chicken.png",
-    "tags": ["SOLID", "COOKED", "COOKED_MEAT", "SELLABLE", "FOOD"],
+    "tags": ["COOKED", "COOKED_MEAT", "SELLABLE", "FOOD"],
     "attributes": {
       "sellValue": 3.40,
       "foodValue": 4.8
@@ -151,7 +129,7 @@
     "name": "Milk",
     "category": "Liquids",
     "texturePath": "textures/materials/milk.png",
-    "tags": ["LIQUID", "FOOD", "SELLABLE"],
+    "tags": ["FOOD", "SELLABLE"],
     "attributes": {
       "foodValue": 0.3,
       "sellValue": 0.6
@@ -162,7 +140,7 @@
     "name": "Flour",
     "category": "Food/Ingredients",
     "texturePath": "textures/materials/flour.png",
-    "tags": ["SOLID", "SELLABLE"],
+    "tags": ["SELLABLE"],
     "attributes": {
       "sellValue": 0.48
     }
@@ -172,7 +150,7 @@
     "name": "Bread",
     "category": "Food/Ingredients",
     "texturePath": "textures/materials/bread.png",
-    "tags": ["SOLID", "FOOD", "SELLABLE"],
+    "tags": ["FOOD", "SELLABLE"],
     "attributes": {
       "foodValue": 3.2,
       "sellValue": 0.9
@@ -183,7 +161,7 @@
     "name": "Tomato",
     "category": "Food/Crops",
     "texturePath": "textures/materials/tomato.png",
-    "tags": ["SOLID", "FOOD", "SELLABLE"],
+    "tags": ["FOOD", "SELLABLE"],
     "attributes": {
       "foodValue": 0.4,
       "sellValue": 0.11
@@ -194,7 +172,7 @@
     "name": "Lettuce",
     "category": "Food/Crops",
     "texturePath": "textures/materials/lettuce.png",
-    "tags": ["SOLID", "FOOD", "ANIMAL_FEED", "SELLABLE"],
+    "tags": ["FOOD", "ANIMAL_FEED", "SELLABLE"],
     "attributes": {
       "foodValue": 0.25,
       "sellValue": 0.08
@@ -205,7 +183,7 @@
     "name": "Onion",
     "category": "Food/Crops",
     "texturePath": "textures/materials/onion.png",
-    "tags": ["SOLID", "FOOD", "SELLABLE"],
+    "tags": ["FOOD", "SELLABLE"],
     "attributes": {
       "foodValue": 0.2,
       "sellValue": 0.09
@@ -216,7 +194,7 @@
     "name": "Potato",
     "category": "Food/Crops",
     "texturePath": "textures/materials/potato.png",
-    "tags": ["SOLID", "FOOD", "ANIMAL_FEED", "SELLABLE"],
+    "tags": ["FOOD", "ANIMAL_FEED", "SELLABLE"],
     "attributes": {
       "foodValue": 0.6,
       "sellValue": 0.13
@@ -227,7 +205,7 @@
     "name": "Carrot",
     "category": "Food/Crops",
     "texturePath": "textures/materials/carrot.png",
-    "tags": ["SOLID", "FOOD", "ANIMAL_FEED", "SELLABLE"],
+    "tags": ["FOOD", "ANIMAL_FEED", "SELLABLE"],
     "attributes": {
       "foodValue": 0.6,
       "sellValue": 0.14
@@ -238,7 +216,7 @@
     "name": "Cheese",
     "category": "Food/Ingredients",
     "texturePath": "textures/materials/cheese.png",
-    "tags": ["SOLID", "FOOD", "SELLABLE"],
+    "tags": ["FOOD", "SELLABLE"],
     "attributes": {
       "foodValue": 1.5,
       "sellValue": 1.4
@@ -249,7 +227,7 @@
     "name": "Sandwich",
     "category": "Food/Prepped Meals",
     "texturePath": "textures/materials/sandwich.png",
-    "tags": ["SOLID", "FOOD", "SELLABLE"],
+    "tags": ["FOOD", "SELLABLE"],
     "attributes": {
       "foodValue": 9.5,
       "sellValue": 5.2
@@ -260,7 +238,7 @@
     "name": "Pizza",
     "category": "Food/Prepped Meals",
     "texturePath": "textures/materials/pizza.png",
-    "tags": ["SOLID", "FOOD", "SELLABLE"],
+    "tags": ["FOOD", "SELLABLE"],
     "attributes": {
       "foodValue": 8.7,
       "sellValue": 4.7
@@ -270,7 +248,103 @@
     "key": "COIN",
     "name": "Coin",
     "category": "Money",
-    "texturePath": "textures/materials/coin.png",
-    "tags": ["SOLID"]
+    "texturePath": "textures/materials/coin.png"
+  },
+  {
+    "key": "OIL",
+    "name": "Crude Oil",
+    "category": "Petroleum",
+    "texturePath": "textures/materials/oil.png",
+    "tags": ["SELLABLE"],
+    "attributes": {
+      "sellValue": 0.9
+    }
+  },
+  {
+    "key": "NATURAL_GAS",
+    "name": "Natural Gas",
+    "category": "Petroleum",
+    "texturePath": "textures/materials/natural-gas.png",
+    "tags": ["SELLABLE"],
+    "attributes": {
+      "sellValue": 0.8
+    }
+  },
+  {
+    "key": "GASOLINE",
+    "name": "Gasoline",
+    "category": "Petroleum",
+    "texturePath": "textures/materials/gasoline.png",
+    "tags": ["FUEL", "OIL_FUEL", "SELLABLE"],
+    "attributes": {
+      "fuelValue": 0.7,
+      "sellValue": 1.9
+    }
+  },
+  {
+    "key": "NAPHTHA",
+    "name": "Naphtha",
+    "category": "Petroleum",
+    "texturePath": "textures/materials/naphtha.png"
+  },
+  {
+    "key": "KEROSENE",
+    "name": "Kerosene",
+    "category": "Petroleum",
+    "texturePath": "textures/materials/kerosene.png",
+    "tags": ["FUEL", "OIL_FUEL"],
+    "attributes": {
+      "fuelValue": 0.8
+    }
+  },
+  {
+    "key": "DIESEL",
+    "name": "Diesel",
+    "category": "Petroleum",
+    "texturePath": "textures/materials/diesel.png",
+    "tags": ["FUEL", "OIL_FUEL", "SELLABLE"],
+    "attributes": {
+      "fuelValue": 1.3,
+      "sellValue": 2.4
+    }
+  },
+  {
+    "key": "MACHINE_OIL",
+    "name": "Machine Oil",
+    "category": "Petroleum",
+    "texturePath": "textures/materials/machine-oil.png"
+  },
+  {
+    "key": "HEAVY_OIL",
+    "name": "Heavy Oil",
+    "category": "Petroleum",
+    "texturePath": "textures/materials/heavy-oil.png"
+  },
+  {
+    "key": "BITUMEN",
+    "name": "Bitumen",
+    "category": "Petroleum",
+    "texturePath": "textures/materials/bitumen.png"
+  },
+  {
+    "key": "RESIDUE",
+    "name": "Residue",
+    "category": "Waste",
+    "texturePath": "textures/materials/residue.png"
+  },
+  {
+    "key": "ASPHALT",
+    "name": "Asphalt",
+    "category": "Materials"
+  },
+  {
+    "key": "GRAVEL",
+    "name": "Gravel",
+    "category": "Materials",
+    "texturePath": "textures/materials/gravel.png",
+    "tags": ["SELLABLE"],
+    "attributes": {
+      "sellValue": 0.005
+    }
   }
 ]

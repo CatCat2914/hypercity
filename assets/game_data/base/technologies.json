@@ -11,20 +11,11 @@
   {
     "key": "AGRICULTURE",
     "name": "Agriculture",
-    "requiredResearch": [],
+    "requiredResearch": ["base.FORESTRY"],
     "resourceCost": [{ "resource": "base.TOMATO", "value": 10.0 }],
     "unlocks": [
       "base.FARM.POTATO",
       "base.FARM.CARROT"
-    ]
-  },
-  {
-    "key": "CONSTRUCTION",
-    "name": "Construction",
-    "requiredResearch": ["base.FORESTRY"],
-    "resourceCost": [{ "resource": "base.WOOD", "value": 15.0 }],
-    "unlocks": [
-      "base.FACTORY.PLANKS"
     ]
   },
   {
@@ -44,6 +35,15 @@
     "unlocks": [
       "base.FARM.CORN",
       "base.FARM.WHEAT"
+    ]
+  },
+  {
+    "key": "CONSTRUCTION",
+    "name": "Construction",
+    "requiredResearch": ["base.MINING"],
+    "resourceCost": [{ "resource": "base.WOOD", "value": 15.0 }],
+    "unlocks": [
+      "base.FACTORY.PLANKS"
     ]
   },
   {
@@ -144,7 +144,8 @@
     "requiredResearch": ["base.IRON_MINING"],
     "resourceCost": [{ "resource": "base.IRON_INGOT", "value": 3.0 }],
     "unlocks": [
-      "base.MINE.ROCKS"
+      "base.MINE.ROCKS",
+      "base.FACTORY.GRAVEL"
     ]
   },
   {
@@ -225,8 +226,8 @@
     ]
   },
   {
-    "key": "DIESEL",
-    "name": "Diesel",
+    "key": "OIL_REFINING",
+    "name": "Oil Refining",
     "requiredResearch": ["base.OIL_MINING"],
     "resourceCost": [
       { "resource": "base.OIL", "value": 40.0 },
@@ -234,7 +235,20 @@
     ],
     "unlocks": [
       "base.GAS_GENERATOR.OIL_BASED",
-      "base.REACTOR.OIL_DIESEL"
+      "base.REACTOR.FRACTIONAL_DISTILLATION"
+    ]
+  },
+  {
+    "key": "BETTER_ROADS",
+    "name": "Better Roads",
+    "requiredResearch": ["base.OIL_REFINING"],
+    "resourceCost": [
+      { "resource": "base.GRAVEL", "value": 65.0 },
+      { "resource": "base.GASOLINE", "value": 15.0 },
+      { "resource": "base.STEEL_INGOT", "value": 5.0 }
+    ],
+    "unlocks": [
+      "base.FACTORY.ASPHALT"
     ]
   }
 ]

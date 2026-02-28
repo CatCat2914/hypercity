@@ -2,10 +2,10 @@
   {
     "key": "EXTRACT_OIL",
     "name": "Extract Oil",
-    "powerConsumption": 1.0,
-    "maxWorkers": 1,
+    "powerConsumption": 1.4,
+    "maxWorkers": 0,
     "inputs": [
-      { "resource": "base.ROCK", "value": 1.2 }
+      { "resource": "base.GRAVEL", "value": 1.6 }
     ],
     "outputs": [
       { "resource": "base.OIL", "value": 0.2 }

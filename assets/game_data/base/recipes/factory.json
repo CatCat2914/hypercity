@@ -35,5 +35,30 @@
     "outputs": [
       { "resource": "base.STEEL_INGOT", "value": 1.0 }
     ]
+  },
+  {
+    "key": "ASPHALT",
+    "name": "Make Asphalt",
+    "powerConsumption": 2.0,
+    "maxWorkers": 0,
+    "inputs": [
+      { "resource": "base.GRAVEL", "value": 1.0 },
+      { "resource": "base.BITUMEN", "value": 0.1 }
+    ],
+    "outputs": [
+      { "resource": "base.ASPHALT", "value": 1.0 }
+    ]
+  },
+  {
+    "key": "GRAVEL",
+    "name": "Crush Rocks",
+    "powerConsumption": 1.4,
+    "maxWorkers": 0,
+    "inputs": [
+      { "tag": "FULL_ROCK", "value": 3.0 }
+    ],
+    "outputs": [
+      { "resource": "base.GRAVEL", "value": 5.0 }
+    ]
   }
 ]
